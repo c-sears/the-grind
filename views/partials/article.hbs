@@ -1,0 +1,19 @@
+<ul id="mylist">
+    {{#each articles as |article|}}
+    <li>
+        <div class="card border-dark">
+            <div class="card-header bg-dark">{{article.date}}</div>
+            <div class="card-body">
+                <h5 class="card-title">{{article.title}}</h5>
+                <div class="row">
+                    <p class="card-text col-sm-9">{{article.summary}}</p>
+                    <img class="col-sm-3" src={{article.image}} alt="">
+                </div>
+                <a href={{article.link}} target="_blank" class="btn btn-dark">Read full article</a>
+                <a href="/comment/{{article._id}}"class="btn btn-success">Comment</a>
+                
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
